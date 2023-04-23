@@ -5,6 +5,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.FileSystem;
 import java.nio.file.Files;
+import java.nio.file.Path;
+
 import k.filetransfer.agent.client.FileTransferClient;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -18,11 +20,13 @@ public class FileTransferService {
 
     private final FileTransferClient fileTransferClient;
 
-    public void run(String path, String name) throws IOException {
+    public void run(Path path) throws IOException {
 
 
         // TODO Local File 체크
-        File file = new File(path + File.separator + name);
+        ;
+        File file = new File(path.toAbsolutePath().toString());
+                //new File(path + File.separator + name);
         log.debug("File.pathSeparator : {}", File.separator);
 
         // TODO 접속정보 알아보기.

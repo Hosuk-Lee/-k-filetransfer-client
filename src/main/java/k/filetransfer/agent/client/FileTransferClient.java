@@ -26,7 +26,9 @@ public interface FileTransferClient {
     // headers = "Content-Type=multipart/form-data")
 //    @PostMapping(value = "/uploadFile", produces = "multipart/form-data")
 //    String upload(@RequestPart("file") MultipartFile file);
-    @PostMapping(value = "/uploadFile"
-            , consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(
+            value = "/uploadFile"
+            , consumes = MediaType.MULTIPART_FORM_DATA_VALUE
+    )
     String fileUpload(@RequestPart(value = "file", required = false) MultipartFile file);
 }

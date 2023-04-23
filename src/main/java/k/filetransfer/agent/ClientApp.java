@@ -55,6 +55,10 @@ public class ClientApp {
                             + ".zip");
 
             ZipUtil.pack(srcPath,desPath);
+            System.out.println("전송파일 : " + desPath.toAbsolutePath());
+            service.run(
+                    desPath
+            );
         };
     }
 }
