@@ -1,0 +1,1 @@
+java -jar C:/Users/hosuk/cop/k-filetransfer-client/target/k-filetransfer-0.9.0.jar --id=%1 --path=%2

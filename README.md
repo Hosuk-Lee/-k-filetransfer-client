@@ -1,1 +1,1 @@
-# -k-filetransfer-client
+# k-filetransfer-server
